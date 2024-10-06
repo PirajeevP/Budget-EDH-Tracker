@@ -3,34 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Budget Standings</title>
+  <title>Tournament Match Results</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <h1>Tournament Standings</h1>
+  <h1>Tournament Match Results</h1>
 
-    <form id="team-form" class="form">
-      <input type="text" id="team-name" placeholder="Enter player name" required>
-      <input type="number" id="team-points" placeholder="Enter points" required>
-      <button type="submit">Add/Update Player</button>
-    </form>
+  <!-- Player Scores Table -->
+  <h2>Player Scores</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Player</th>
+        <th>Total Points</th>
+      </tr>
+    </thead>
+    <tbody id="scores-table-body">
+      <!-- Player scores will be dynamically added here -->
+    </tbody>
+  </table>
 
-    <div class="table-container">
-      <table id="standings-table">
-        <thead>
-          <tr>
-            <th>Player</th>
-            <th>Points</th>
-          </tr>
-        </thead>
-        <tbody id="table-body">
-          <!-- Rows will be added here by JavaScript -->
-        </tbody>
-      </table>
-    </div>
-  </div>
+  <!-- Match Form -->
+  <form id="match-form">
+    <label for="player-1">1st Place Player:</label>
+    <input type="text" id="player-1" placeholder="Enter Player 1">
+
+    <label for="player-2">2nd Place Player:</label>
+    <input type="text" id="player-2" placeholder="Enter Player 2">
+
+    <label for="player-3">3rd Place Player:</label>
+    <input type="text" id="player-3" placeholder="Enter Player 3">
+
+    <button type="submit">Submit Match</button>
+  </form>
+
+  <!-- Match Results Table -->
+  <h2>Results Table</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Match</th>
+        <th>1st Place</th>
+        <th>2nd Place</th>
+        <th>3rd Place</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="results-table-body">
+      <!-- Match results will be dynamically added here -->
+    </tbody>
+  </table>
 
   <script src="script.js"></script>
 </body>
