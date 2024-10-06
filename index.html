@@ -3,30 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tournament Standings</title>
+  <title>Budget Standings</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
     <h1>Tournament Standings</h1>
 
-    <form id="team-form">
-      <input type="text" id="team-name" placeholder="Enter team name" required>
+    <form id="team-form" class="form">
+      <input type="text" id="team-name" placeholder="Enter player name" required>
       <input type="number" id="team-points" placeholder="Enter points" required>
-      <button type="submit">Add/Update Team</button>
+      <button type="submit">Add/Update Player</button>
     </form>
 
-    <table id="standings-table">
-      <thead>
-        <tr>
-          <th>Team</th>
-          <th>Points</th>
-        </tr>
-      </thead>
-      <tbody id="table-body">
-        <!-- Rows will be added here by JavaScript -->
-      </tbody>
-    </table>
+    <div class="table-container">
+      <table id="standings-table">
+        <thead>
+          <tr>
+            <th>Player</th>
+            <th>Points</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+          <!-- Rows will be added here by JavaScript -->
+        </tbody>
+      </table>
+    </div>
   </div>
 
   <script src="script.js"></script>
